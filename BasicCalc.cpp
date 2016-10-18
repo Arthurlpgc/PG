@@ -12,3 +12,11 @@ pt FindBezierPt(vector<pt> v,double t){
 	}
 	return v[0];
 }
+vector<pt> Casteljau(vector<pt> v,int numPoints){
+	assert(numPoints>1);
+	vector<pt> ret;
+	for(int i=0;i<numPoints;i++){
+		ret.push_back(FindBezierPt(v,double(i)/double(numPoints-1)))
+	}
+	return ret;
+}
