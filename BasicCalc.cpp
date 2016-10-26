@@ -8,7 +8,7 @@ vector<pt> ControlPoints,BezierCurve;
 int SelectedPoint;
 double StartingX,StartingY;
 
-//points calculation
+//geom calculation
 #define PX first
 #define PY second 
 pt FindBezierPt(vector<pt> v,double t){
@@ -27,6 +27,12 @@ void Casteljau(vector<pt> v,int numPoints){
 		BezierCurve.push_back(FindBezierPt(v,double(i)/double(numPoints-1)));
 	}
 }
+double PTdistance(pt a,pt b){
+	return sqrt((a.PX-b.PX)*(a.PX-b.PX)+(a.PY-b.PY)*(a.PY-b.PY));
+}
+bool PointInSegment(pt a,pt b,pt c){
+	return (PTdistance(a,b)+PTdistance(b,c))/PTdistance(a,c)<1.001;
+}
 
 //events
 void mbpressed(GLFWwindow* window, int button, int action, int mods){
@@ -36,7 +42,7 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS){
 	    	//point drag
 	        for(int i=0;i<ControlPoints.size();i++){
-				if(pow(fabs(xpos-ControlPoints[i].first),2)+pow(fabs(ypos-ControlPoints[i].second),2)<3){
+				if(pow(fabs(xpos-ControlPoints[i].first),2)+pow(fabs(ypos-ControlPoints[i].second),2)<4){
 					SelectedPoint=i;
 					StartingX=xpos;
 					StartingY=ypos;
@@ -44,6 +50,18 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 				}        	
 	        }
 	        //point creation on line
+	        pt aux=make_pair(xpos,ypos);
+	        for(int i=1;i<ControlPoints.size();i++){
+				if(PointInSegment(ControlPoints[i-1],aux,ControlPoints[i])){
+					ControlPoints.push_back(aux);
+					for(int j=ControlPoints.size()-1;j>i;j--){
+						swap(ControlPoints[j],ControlPoints[j-1]);
+					}
+					StartingY=-1000000;
+					SelectedPoint=i;
+					return;
+				}        	
+	        }
 	        //point creation at the end
 	        ControlPoints.push_back(make_pair(xpos,ypos));
 	        Casteljau(ControlPoints,1000);
@@ -103,7 +121,7 @@ int main(void){
         glRectf(0.388889,-0.75,0.944444,-0.916667);
 
         glLineWidth(1.5);
-        glColor3f(0.0, 1.0, 1.0);
+        glColor3f(0.8, 0.8, 0.8);
         makeLines(ControlPoints);
         glLineWidth(0.5);
 		glColor3f(1.0, 1.0, 1.0);
