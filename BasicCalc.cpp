@@ -1,11 +1,16 @@
 #include <GLFW/glfw3.h>
 #include <bits/stdc++.h>
 using namespace std;
+typedef pair<double,double> pt;
+
+//Global variables
+vector<pt> ControlPoints,BezierCurve;
+int SelectedPoint;
+double StartingX,StartingY;
 
 //points calculation
 #define PX first
 #define PY second 
-typedef pair<double,double> pt;
 pt FindBezierPt(vector<pt> v,double t){
 	while(v.size()>1){
 		for(int i=0;i<v.size()-1;i++){
@@ -15,19 +20,13 @@ pt FindBezierPt(vector<pt> v,double t){
 	}
 	return v[0];
 }
-vector<pt> Casteljau(vector<pt> v,int numPoints){
+void Casteljau(vector<pt> v,int numPoints){
 	assert(numPoints>1);
-	vector<pt> ret;
+	BezierCurve.clear();
 	for(int i=0;i<numPoints;i++){
-		ret.push_back(FindBezierPt(v,double(i)/double(numPoints-1)));
+		BezierCurve.push_back(FindBezierPt(v,double(i)/double(numPoints-1)));
 	}
-	return ret;
 }
-
-//Global variables
-vector<pt> ControlPoints,BezierCurve;
-int SelectedPoint;
-double StartingX,StartingY;
 
 //events
 void mbpressed(GLFWwindow* window, int button, int action, int mods){
@@ -47,23 +46,26 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	        //point creation on line
 	        //point creation at the end
 	        ControlPoints.push_back(make_pair(xpos,ypos));
-	        BezierCurve=Casteljau(ControlPoints,100);
+	        Casteljau(ControlPoints,1000);
 	    }else {
 	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<8){
 	    		ControlPoints.erase(ControlPoints.begin()+SelectedPoint);
-	    		BezierCurve=Casteljau(ControlPoints,100);
+	    		Casteljau(ControlPoints,1000);
 	    	}
 	    	SelectedPoint=-1;
 	    }
 	}else{//if on panel area
-
+		if(xpos>500&&xpos<700&&ypos>420&&ypos<460){
+			ControlPoints.clear();
+			BezierCurve.clear();
+		}
 	}
 }
 void mmove(GLFWwindow* window, double xpos, double ypos){
 	if(~SelectedPoint){
 		ControlPoints[SelectedPoint].first=xpos;
 		ControlPoints[SelectedPoint].second=ypos;
-		BezierCurve=Casteljau(ControlPoints,100);
+		Casteljau(ControlPoints,100);
 	}
 }
 
@@ -93,14 +95,20 @@ int main(void){
     while (!glfwWindowShouldClose(window)){//render loop
         glClearColor(0.1f, 0.1f, 0.2f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
+        //panel
         glColor3f(0, 0, 0.10);
         glRectf(0.3333,-1.0,1.0,1.0);
-        glLineWidth(0.5);
-		glColor3f(1.0, 1.0, 1.0);
-        makeLines(BezierCurve);
+        
+        glColor3f(0, 0.1, 0.10);
+        glRectf(0.388889,-0.75,0.944444,-0.916667);
+
         glLineWidth(1.5);
         glColor3f(0.0, 1.0, 1.0);
         makeLines(ControlPoints);
+        glLineWidth(0.5);
+		glColor3f(1.0, 1.0, 1.0);
+        makeLines(BezierCurve);
+        
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
