@@ -1,8 +1,0 @@
-cmake_minimum_required(VERSION 2.8)
-project(pg)
-find_package(OpenGL REQUIRED)
-find_package(X11)
-include_directories(glfw/include ${OPENGL_INCLUDE_DIRS})
-add_subdirectory(glfw)
-add_executable(pg BasicCalc.cpp)
-target_link_libraries(pg glfw  ${OPENGL_LIBRARIES} ${GLFW_LIBRARIES})
