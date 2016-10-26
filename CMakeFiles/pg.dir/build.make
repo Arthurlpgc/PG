@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/PG
+CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/llamaphone/Desktop/PG
+CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P2
 
 # Include any dependencies generated for this target.
 include CMakeFiles/pg.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/pg.dir/flags.make
 
 CMakeFiles/pg.dir/BasicCalc.cpp.o: CMakeFiles/pg.dir/flags.make
 CMakeFiles/pg.dir/BasicCalc.cpp.o: BasicCalc.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/PG/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P2/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pg.dir/BasicCalc.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pg.dir/BasicCalc.cpp.o -c /home/llamaphone/Desktop/PG/BasicCalc.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pg.dir/BasicCalc.cpp.o -c /home/llamaphone/Desktop/P2/BasicCalc.cpp
 
 CMakeFiles/pg.dir/BasicCalc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pg.dir/BasicCalc.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/llamaphone/Desktop/PG/BasicCalc.cpp > CMakeFiles/pg.dir/BasicCalc.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/llamaphone/Desktop/P2/BasicCalc.cpp > CMakeFiles/pg.dir/BasicCalc.cpp.i
 
 CMakeFiles/pg.dir/BasicCalc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pg.dir/BasicCalc.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/llamaphone/Desktop/PG/BasicCalc.cpp -o CMakeFiles/pg.dir/BasicCalc.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/llamaphone/Desktop/P2/BasicCalc.cpp -o CMakeFiles/pg.dir/BasicCalc.cpp.s
 
 CMakeFiles/pg.dir/BasicCalc.cpp.o.requires:
 .PHONY : CMakeFiles/pg.dir/BasicCalc.cpp.o.requires
@@ -107,6 +107,6 @@ CMakeFiles/pg.dir/clean:
 .PHONY : CMakeFiles/pg.dir/clean
 
 CMakeFiles/pg.dir/depend:
-	cd /home/llamaphone/Desktop/PG && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG/CMakeFiles/pg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/llamaphone/Desktop/P2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/CMakeFiles/pg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pg.dir/depend
 

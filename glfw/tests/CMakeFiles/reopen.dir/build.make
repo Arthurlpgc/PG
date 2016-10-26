@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/PG
+CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/llamaphone/Desktop/PG
+CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P2
 
 # Include any dependencies generated for this target.
 include glfw/tests/CMakeFiles/reopen.dir/depend.make
@@ -51,17 +51,17 @@ include glfw/tests/CMakeFiles/reopen.dir/flags.make
 
 glfw/tests/CMakeFiles/reopen.dir/reopen.c.o: glfw/tests/CMakeFiles/reopen.dir/flags.make
 glfw/tests/CMakeFiles/reopen.dir/reopen.c.o: glfw/tests/reopen.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/PG/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P2/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/tests/CMakeFiles/reopen.dir/reopen.c.o"
-	cd /home/llamaphone/Desktop/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/reopen.dir/reopen.c.o   -c /home/llamaphone/Desktop/PG/glfw/tests/reopen.c
+	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/reopen.dir/reopen.c.o   -c /home/llamaphone/Desktop/P2/glfw/tests/reopen.c
 
 glfw/tests/CMakeFiles/reopen.dir/reopen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/reopen.dir/reopen.c.i"
-	cd /home/llamaphone/Desktop/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/PG/glfw/tests/reopen.c > CMakeFiles/reopen.dir/reopen.c.i
+	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P2/glfw/tests/reopen.c > CMakeFiles/reopen.dir/reopen.c.i
 
 glfw/tests/CMakeFiles/reopen.dir/reopen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/reopen.dir/reopen.c.s"
-	cd /home/llamaphone/Desktop/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/PG/glfw/tests/reopen.c -o CMakeFiles/reopen.dir/reopen.c.s
+	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P2/glfw/tests/reopen.c -o CMakeFiles/reopen.dir/reopen.c.s
 
 glfw/tests/CMakeFiles/reopen.dir/reopen.c.o.requires:
 .PHONY : glfw/tests/CMakeFiles/reopen.dir/reopen.c.o.requires
@@ -74,17 +74,17 @@ glfw/tests/CMakeFiles/reopen.dir/reopen.c.o.provides.build: glfw/tests/CMakeFile
 
 glfw/tests/CMakeFiles/reopen.dir/__/deps/glad.c.o: glfw/tests/CMakeFiles/reopen.dir/flags.make
 glfw/tests/CMakeFiles/reopen.dir/__/deps/glad.c.o: glfw/deps/glad.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/PG/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P2/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/tests/CMakeFiles/reopen.dir/__/deps/glad.c.o"
-	cd /home/llamaphone/Desktop/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/reopen.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/PG/glfw/deps/glad.c
+	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/reopen.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/P2/glfw/deps/glad.c
 
 glfw/tests/CMakeFiles/reopen.dir/__/deps/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/reopen.dir/__/deps/glad.c.i"
-	cd /home/llamaphone/Desktop/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/PG/glfw/deps/glad.c > CMakeFiles/reopen.dir/__/deps/glad.c.i
+	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P2/glfw/deps/glad.c > CMakeFiles/reopen.dir/__/deps/glad.c.i
 
 glfw/tests/CMakeFiles/reopen.dir/__/deps/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/reopen.dir/__/deps/glad.c.s"
-	cd /home/llamaphone/Desktop/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/PG/glfw/deps/glad.c -o CMakeFiles/reopen.dir/__/deps/glad.c.s
+	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P2/glfw/deps/glad.c -o CMakeFiles/reopen.dir/__/deps/glad.c.s
 
 glfw/tests/CMakeFiles/reopen.dir/__/deps/glad.c.o.requires:
 .PHONY : glfw/tests/CMakeFiles/reopen.dir/__/deps/glad.c.o.requires
@@ -116,7 +116,7 @@ glfw/tests/reopen: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 glfw/tests/reopen: /usr/lib/x86_64-linux-gnu/libXcursor.so
 glfw/tests/reopen: glfw/tests/CMakeFiles/reopen.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable reopen"
-	cd /home/llamaphone/Desktop/PG/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/reopen.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/llamaphone/Desktop/P2/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/reopen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 glfw/tests/CMakeFiles/reopen.dir/build: glfw/tests/reopen
@@ -127,10 +127,10 @@ glfw/tests/CMakeFiles/reopen.dir/requires: glfw/tests/CMakeFiles/reopen.dir/__/d
 .PHONY : glfw/tests/CMakeFiles/reopen.dir/requires
 
 glfw/tests/CMakeFiles/reopen.dir/clean:
-	cd /home/llamaphone/Desktop/PG/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/reopen.dir/cmake_clean.cmake
+	cd /home/llamaphone/Desktop/P2/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/reopen.dir/cmake_clean.cmake
 .PHONY : glfw/tests/CMakeFiles/reopen.dir/clean
 
 glfw/tests/CMakeFiles/reopen.dir/depend:
-	cd /home/llamaphone/Desktop/PG && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG/glfw/tests /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG/glfw/tests /home/llamaphone/Desktop/PG/glfw/tests/CMakeFiles/reopen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/llamaphone/Desktop/P2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw/tests /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw/tests /home/llamaphone/Desktop/P2/glfw/tests/CMakeFiles/reopen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glfw/tests/CMakeFiles/reopen.dir/depend
 

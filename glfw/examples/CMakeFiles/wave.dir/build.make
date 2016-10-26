@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/PG
+CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/llamaphone/Desktop/PG
+CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P2
 
 # Include any dependencies generated for this target.
 include glfw/examples/CMakeFiles/wave.dir/depend.make
@@ -51,17 +51,17 @@ include glfw/examples/CMakeFiles/wave.dir/flags.make
 
 glfw/examples/CMakeFiles/wave.dir/wave.c.o: glfw/examples/CMakeFiles/wave.dir/flags.make
 glfw/examples/CMakeFiles/wave.dir/wave.c.o: glfw/examples/wave.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/PG/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P2/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/examples/CMakeFiles/wave.dir/wave.c.o"
-	cd /home/llamaphone/Desktop/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/wave.dir/wave.c.o   -c /home/llamaphone/Desktop/PG/glfw/examples/wave.c
+	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/wave.dir/wave.c.o   -c /home/llamaphone/Desktop/P2/glfw/examples/wave.c
 
 glfw/examples/CMakeFiles/wave.dir/wave.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wave.dir/wave.c.i"
-	cd /home/llamaphone/Desktop/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/PG/glfw/examples/wave.c > CMakeFiles/wave.dir/wave.c.i
+	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P2/glfw/examples/wave.c > CMakeFiles/wave.dir/wave.c.i
 
 glfw/examples/CMakeFiles/wave.dir/wave.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wave.dir/wave.c.s"
-	cd /home/llamaphone/Desktop/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/PG/glfw/examples/wave.c -o CMakeFiles/wave.dir/wave.c.s
+	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P2/glfw/examples/wave.c -o CMakeFiles/wave.dir/wave.c.s
 
 glfw/examples/CMakeFiles/wave.dir/wave.c.o.requires:
 .PHONY : glfw/examples/CMakeFiles/wave.dir/wave.c.o.requires
@@ -74,17 +74,17 @@ glfw/examples/CMakeFiles/wave.dir/wave.c.o.provides.build: glfw/examples/CMakeFi
 
 glfw/examples/CMakeFiles/wave.dir/__/deps/glad.c.o: glfw/examples/CMakeFiles/wave.dir/flags.make
 glfw/examples/CMakeFiles/wave.dir/__/deps/glad.c.o: glfw/deps/glad.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/PG/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P2/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/examples/CMakeFiles/wave.dir/__/deps/glad.c.o"
-	cd /home/llamaphone/Desktop/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/wave.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/PG/glfw/deps/glad.c
+	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/wave.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/P2/glfw/deps/glad.c
 
 glfw/examples/CMakeFiles/wave.dir/__/deps/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wave.dir/__/deps/glad.c.i"
-	cd /home/llamaphone/Desktop/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/PG/glfw/deps/glad.c > CMakeFiles/wave.dir/__/deps/glad.c.i
+	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P2/glfw/deps/glad.c > CMakeFiles/wave.dir/__/deps/glad.c.i
 
 glfw/examples/CMakeFiles/wave.dir/__/deps/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wave.dir/__/deps/glad.c.s"
-	cd /home/llamaphone/Desktop/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/PG/glfw/deps/glad.c -o CMakeFiles/wave.dir/__/deps/glad.c.s
+	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P2/glfw/deps/glad.c -o CMakeFiles/wave.dir/__/deps/glad.c.s
 
 glfw/examples/CMakeFiles/wave.dir/__/deps/glad.c.o.requires:
 .PHONY : glfw/examples/CMakeFiles/wave.dir/__/deps/glad.c.o.requires
@@ -116,7 +116,7 @@ glfw/examples/wave: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 glfw/examples/wave: /usr/lib/x86_64-linux-gnu/libXcursor.so
 glfw/examples/wave: glfw/examples/CMakeFiles/wave.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable wave"
-	cd /home/llamaphone/Desktop/PG/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wave.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/llamaphone/Desktop/P2/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wave.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 glfw/examples/CMakeFiles/wave.dir/build: glfw/examples/wave
@@ -127,10 +127,10 @@ glfw/examples/CMakeFiles/wave.dir/requires: glfw/examples/CMakeFiles/wave.dir/__
 .PHONY : glfw/examples/CMakeFiles/wave.dir/requires
 
 glfw/examples/CMakeFiles/wave.dir/clean:
-	cd /home/llamaphone/Desktop/PG/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/wave.dir/cmake_clean.cmake
+	cd /home/llamaphone/Desktop/P2/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/wave.dir/cmake_clean.cmake
 .PHONY : glfw/examples/CMakeFiles/wave.dir/clean
 
 glfw/examples/CMakeFiles/wave.dir/depend:
-	cd /home/llamaphone/Desktop/PG && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG/glfw/examples /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG/glfw/examples /home/llamaphone/Desktop/PG/glfw/examples/CMakeFiles/wave.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/llamaphone/Desktop/P2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw/examples /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw/examples /home/llamaphone/Desktop/P2/glfw/examples/CMakeFiles/wave.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glfw/examples/CMakeFiles/wave.dir/depend
 

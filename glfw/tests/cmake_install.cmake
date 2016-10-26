@@ -1,4 +1,4 @@
-# Install script for directory: /home/llamaphone/Desktop/PG/glfw/tests
+# Install script for directory: /home/llamaphone/Desktop/P2/glfw/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

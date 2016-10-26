@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/llamaphone/Desktop/PG/BasicCalc.cpp
+/home/llamaphone/Desktop/P2/BasicCalc.cpp
 GLFW/glfw3.h
 -
 bits/stdc++.h

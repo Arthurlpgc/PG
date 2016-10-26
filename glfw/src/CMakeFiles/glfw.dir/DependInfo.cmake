@@ -4,21 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/llamaphone/Desktop/PG/glfw/src/context.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/context.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/egl_context.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/glx_context.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/init.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/init.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/input.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/input.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/linux_joystick.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/monitor.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/posix_time.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/posix_tls.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/vulkan.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/window.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/window.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/x11_init.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/x11_monitor.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/x11_window.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o"
-  "/home/llamaphone/Desktop/PG/glfw/src/xkb_unicode.c" "/home/llamaphone/Desktop/PG/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/context.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/context.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/egl_context.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/glx_context.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/init.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/init.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/input.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/input.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/linux_joystick.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/monitor.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/posix_time.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/posix_tls.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/vulkan.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/window.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/x11_init.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/x11_monitor.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/x11_window.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o"
+  "/home/llamaphone/Desktop/P2/glfw/src/xkb_unicode.c" "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

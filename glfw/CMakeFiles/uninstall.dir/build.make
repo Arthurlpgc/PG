@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/PG
+CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/llamaphone/Desktop/PG
+CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P2
 
 # Utility rule file for uninstall.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/llamaphone/Desktop/PG
 include glfw/CMakeFiles/uninstall.dir/progress.make
 
 glfw/CMakeFiles/uninstall:
-	cd /home/llamaphone/Desktop/PG/glfw && /usr/bin/cmake -P /home/llamaphone/Desktop/PG/glfw/cmake_uninstall.cmake
+	cd /home/llamaphone/Desktop/P2/glfw && /usr/bin/cmake -P /home/llamaphone/Desktop/P2/glfw/cmake_uninstall.cmake
 
 uninstall: glfw/CMakeFiles/uninstall
 uninstall: glfw/CMakeFiles/uninstall.dir/build.make
@@ -57,10 +57,10 @@ glfw/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : glfw/CMakeFiles/uninstall.dir/build
 
 glfw/CMakeFiles/uninstall.dir/clean:
-	cd /home/llamaphone/Desktop/PG/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/llamaphone/Desktop/P2/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : glfw/CMakeFiles/uninstall.dir/clean
 
 glfw/CMakeFiles/uninstall.dir/depend:
-	cd /home/llamaphone/Desktop/PG && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG/glfw /home/llamaphone/Desktop/PG /home/llamaphone/Desktop/PG/glfw /home/llamaphone/Desktop/PG/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/llamaphone/Desktop/P2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw /home/llamaphone/Desktop/P2/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glfw/CMakeFiles/uninstall.dir/depend
 
