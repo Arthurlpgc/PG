@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/llamaphone/Desktop/P2/glfw/deps/glad.c" "/home/llamaphone/Desktop/P2/glfw/tests/CMakeFiles/timeout.dir/__/deps/glad.c.o"
-  "/home/llamaphone/Desktop/P2/glfw/tests/timeout.c" "/home/llamaphone/Desktop/P2/glfw/tests/CMakeFiles/timeout.dir/timeout.c.o"
+  "/home/llamaphone/Desktop/P3/glfw/deps/glad.c" "/home/llamaphone/Desktop/P3/glfw/tests/CMakeFiles/timeout.dir/__/deps/glad.c.o"
+  "/home/llamaphone/Desktop/P3/glfw/tests/timeout.c" "/home/llamaphone/Desktop/P3/glfw/tests/CMakeFiles/timeout.dir/timeout.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/llamaphone/Desktop/P2/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/llamaphone/Desktop/P3/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

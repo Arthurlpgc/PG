@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P2
+CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P2
+CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P3
 
 # Include any dependencies generated for this target.
 include glfw/examples/CMakeFiles/gears.dir/depend.make
@@ -51,17 +51,17 @@ include glfw/examples/CMakeFiles/gears.dir/flags.make
 
 glfw/examples/CMakeFiles/gears.dir/gears.c.o: glfw/examples/CMakeFiles/gears.dir/flags.make
 glfw/examples/CMakeFiles/gears.dir/gears.c.o: glfw/examples/gears.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P2/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/examples/CMakeFiles/gears.dir/gears.c.o"
-	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gears.dir/gears.c.o   -c /home/llamaphone/Desktop/P2/glfw/examples/gears.c
+	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gears.dir/gears.c.o   -c /home/llamaphone/Desktop/P3/glfw/examples/gears.c
 
 glfw/examples/CMakeFiles/gears.dir/gears.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gears.dir/gears.c.i"
-	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P2/glfw/examples/gears.c > CMakeFiles/gears.dir/gears.c.i
+	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P3/glfw/examples/gears.c > CMakeFiles/gears.dir/gears.c.i
 
 glfw/examples/CMakeFiles/gears.dir/gears.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gears.dir/gears.c.s"
-	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P2/glfw/examples/gears.c -o CMakeFiles/gears.dir/gears.c.s
+	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P3/glfw/examples/gears.c -o CMakeFiles/gears.dir/gears.c.s
 
 glfw/examples/CMakeFiles/gears.dir/gears.c.o.requires:
 .PHONY : glfw/examples/CMakeFiles/gears.dir/gears.c.o.requires
@@ -74,17 +74,17 @@ glfw/examples/CMakeFiles/gears.dir/gears.c.o.provides.build: glfw/examples/CMake
 
 glfw/examples/CMakeFiles/gears.dir/__/deps/glad.c.o: glfw/examples/CMakeFiles/gears.dir/flags.make
 glfw/examples/CMakeFiles/gears.dir/__/deps/glad.c.o: glfw/deps/glad.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P2/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/examples/CMakeFiles/gears.dir/__/deps/glad.c.o"
-	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gears.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/P2/glfw/deps/glad.c
+	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/gears.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/P3/glfw/deps/glad.c
 
 glfw/examples/CMakeFiles/gears.dir/__/deps/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gears.dir/__/deps/glad.c.i"
-	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P2/glfw/deps/glad.c > CMakeFiles/gears.dir/__/deps/glad.c.i
+	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P3/glfw/deps/glad.c > CMakeFiles/gears.dir/__/deps/glad.c.i
 
 glfw/examples/CMakeFiles/gears.dir/__/deps/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gears.dir/__/deps/glad.c.s"
-	cd /home/llamaphone/Desktop/P2/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P2/glfw/deps/glad.c -o CMakeFiles/gears.dir/__/deps/glad.c.s
+	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P3/glfw/deps/glad.c -o CMakeFiles/gears.dir/__/deps/glad.c.s
 
 glfw/examples/CMakeFiles/gears.dir/__/deps/glad.c.o.requires:
 .PHONY : glfw/examples/CMakeFiles/gears.dir/__/deps/glad.c.o.requires
@@ -116,7 +116,7 @@ glfw/examples/gears: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 glfw/examples/gears: /usr/lib/x86_64-linux-gnu/libXcursor.so
 glfw/examples/gears: glfw/examples/CMakeFiles/gears.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable gears"
-	cd /home/llamaphone/Desktop/P2/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gears.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/llamaphone/Desktop/P3/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gears.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 glfw/examples/CMakeFiles/gears.dir/build: glfw/examples/gears
@@ -127,10 +127,10 @@ glfw/examples/CMakeFiles/gears.dir/requires: glfw/examples/CMakeFiles/gears.dir/
 .PHONY : glfw/examples/CMakeFiles/gears.dir/requires
 
 glfw/examples/CMakeFiles/gears.dir/clean:
-	cd /home/llamaphone/Desktop/P2/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/gears.dir/cmake_clean.cmake
+	cd /home/llamaphone/Desktop/P3/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/gears.dir/cmake_clean.cmake
 .PHONY : glfw/examples/CMakeFiles/gears.dir/clean
 
 glfw/examples/CMakeFiles/gears.dir/depend:
-	cd /home/llamaphone/Desktop/P2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw/examples /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw/examples /home/llamaphone/Desktop/P2/glfw/examples/CMakeFiles/gears.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/llamaphone/Desktop/P3 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P3 /home/llamaphone/Desktop/P3/glfw/examples /home/llamaphone/Desktop/P3 /home/llamaphone/Desktop/P3/glfw/examples /home/llamaphone/Desktop/P3/glfw/examples/CMakeFiles/gears.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glfw/examples/CMakeFiles/gears.dir/depend
 

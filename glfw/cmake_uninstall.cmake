@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/home/llamaphone/Desktop/P2/glfw/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/home/llamaphone/Desktop/P2/glfw/install_manifest.txt\"")
+if (NOT EXISTS "/home/llamaphone/Desktop/P3/glfw/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/home/llamaphone/Desktop/P3/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "/home/llamaphone/Desktop/P2/glfw/install_manifest.txt" files)
+file(READ "/home/llamaphone/Desktop/P3/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

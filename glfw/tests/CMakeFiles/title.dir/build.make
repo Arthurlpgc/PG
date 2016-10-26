@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P2
+CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P2
+CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P3
 
 # Include any dependencies generated for this target.
 include glfw/tests/CMakeFiles/title.dir/depend.make
@@ -51,17 +51,17 @@ include glfw/tests/CMakeFiles/title.dir/flags.make
 
 glfw/tests/CMakeFiles/title.dir/title.c.o: glfw/tests/CMakeFiles/title.dir/flags.make
 glfw/tests/CMakeFiles/title.dir/title.c.o: glfw/tests/title.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P2/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/tests/CMakeFiles/title.dir/title.c.o"
-	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/title.dir/title.c.o   -c /home/llamaphone/Desktop/P2/glfw/tests/title.c
+	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/title.dir/title.c.o   -c /home/llamaphone/Desktop/P3/glfw/tests/title.c
 
 glfw/tests/CMakeFiles/title.dir/title.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/title.dir/title.c.i"
-	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P2/glfw/tests/title.c > CMakeFiles/title.dir/title.c.i
+	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P3/glfw/tests/title.c > CMakeFiles/title.dir/title.c.i
 
 glfw/tests/CMakeFiles/title.dir/title.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/title.dir/title.c.s"
-	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P2/glfw/tests/title.c -o CMakeFiles/title.dir/title.c.s
+	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P3/glfw/tests/title.c -o CMakeFiles/title.dir/title.c.s
 
 glfw/tests/CMakeFiles/title.dir/title.c.o.requires:
 .PHONY : glfw/tests/CMakeFiles/title.dir/title.c.o.requires
@@ -74,17 +74,17 @@ glfw/tests/CMakeFiles/title.dir/title.c.o.provides.build: glfw/tests/CMakeFiles/
 
 glfw/tests/CMakeFiles/title.dir/__/deps/glad.c.o: glfw/tests/CMakeFiles/title.dir/flags.make
 glfw/tests/CMakeFiles/title.dir/__/deps/glad.c.o: glfw/deps/glad.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P2/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/tests/CMakeFiles/title.dir/__/deps/glad.c.o"
-	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/title.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/P2/glfw/deps/glad.c
+	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/title.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/P3/glfw/deps/glad.c
 
 glfw/tests/CMakeFiles/title.dir/__/deps/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/title.dir/__/deps/glad.c.i"
-	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P2/glfw/deps/glad.c > CMakeFiles/title.dir/__/deps/glad.c.i
+	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P3/glfw/deps/glad.c > CMakeFiles/title.dir/__/deps/glad.c.i
 
 glfw/tests/CMakeFiles/title.dir/__/deps/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/title.dir/__/deps/glad.c.s"
-	cd /home/llamaphone/Desktop/P2/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P2/glfw/deps/glad.c -o CMakeFiles/title.dir/__/deps/glad.c.s
+	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P3/glfw/deps/glad.c -o CMakeFiles/title.dir/__/deps/glad.c.s
 
 glfw/tests/CMakeFiles/title.dir/__/deps/glad.c.o.requires:
 .PHONY : glfw/tests/CMakeFiles/title.dir/__/deps/glad.c.o.requires
@@ -116,7 +116,7 @@ glfw/tests/title: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 glfw/tests/title: /usr/lib/x86_64-linux-gnu/libXcursor.so
 glfw/tests/title: glfw/tests/CMakeFiles/title.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable title"
-	cd /home/llamaphone/Desktop/P2/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/title.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/llamaphone/Desktop/P3/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/title.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 glfw/tests/CMakeFiles/title.dir/build: glfw/tests/title
@@ -127,10 +127,10 @@ glfw/tests/CMakeFiles/title.dir/requires: glfw/tests/CMakeFiles/title.dir/__/dep
 .PHONY : glfw/tests/CMakeFiles/title.dir/requires
 
 glfw/tests/CMakeFiles/title.dir/clean:
-	cd /home/llamaphone/Desktop/P2/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/title.dir/cmake_clean.cmake
+	cd /home/llamaphone/Desktop/P3/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/title.dir/cmake_clean.cmake
 .PHONY : glfw/tests/CMakeFiles/title.dir/clean
 
 glfw/tests/CMakeFiles/title.dir/depend:
-	cd /home/llamaphone/Desktop/P2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw/tests /home/llamaphone/Desktop/P2 /home/llamaphone/Desktop/P2/glfw/tests /home/llamaphone/Desktop/P2/glfw/tests/CMakeFiles/title.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/llamaphone/Desktop/P3 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P3 /home/llamaphone/Desktop/P3/glfw/tests /home/llamaphone/Desktop/P3 /home/llamaphone/Desktop/P3/glfw/tests /home/llamaphone/Desktop/P3/glfw/tests/CMakeFiles/title.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glfw/tests/CMakeFiles/title.dir/depend
 

@@ -804,3 +804,123 @@ Linking C executable cmTryCompileExec3872593639
 make[1]: Leaving directory '/home/llamaphone/Desktop/P2/CMakeFiles/CMakeTmp'
 
 
+Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3658365777/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3658365777.dir/build.make CMakeFiles/cmTryCompileExec3658365777.dir/build
+make[1]: Entering directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3658365777.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec3658365777.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3658365777
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3658365777.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec3658365777.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3658365777 -rdynamic -lX11 -lXext 
+make[1]: Leaving directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3015872595/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3015872595.dir/build.make CMakeFiles/cmTryCompileExec3015872595.dir/build
+make[1]: Entering directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3015872595.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3015872595.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3015872595
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3015872595.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3015872595.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3015872595 -rdynamic 
+make[1]: Leaving directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec800197599/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec800197599.dir/build.make CMakeFiles/cmTryCompileExec800197599.dir/build
+make[1]: Entering directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec800197599.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec800197599.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec800197599
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec800197599.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec800197599.dir/CheckFunctionExists.c.o  -o cmTryCompileExec800197599 -rdynamic 
+make[1]: Leaving directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1305308174/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1305308174.dir/build.make CMakeFiles/cmTryCompileExec1305308174.dir/build
+make[1]: Entering directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1305308174.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec1305308174.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1305308174
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1305308174.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec1305308174.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1305308174 -rdynamic 
+make[1]: Leaving directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec272752446/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec272752446.dir/build.make CMakeFiles/cmTryCompileExec272752446.dir/build
+make[1]: Entering directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec272752446.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec272752446.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec272752446
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec272752446.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec272752446.dir/CheckFunctionExists.c.o  -o cmTryCompileExec272752446 -rdynamic 
+make[1]: Leaving directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1729287745/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1729287745.dir/build.make CMakeFiles/cmTryCompileExec1729287745.dir/build
+make[1]: Entering directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1729287745.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec1729287745.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1729287745
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1729287745.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec1729287745.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1729287745 -rdynamic -lICE 
+make[1]: Leaving directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2048250528/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2048250528.dir/build.make CMakeFiles/cmTryCompileExec2048250528.dir/build
+make[1]: Entering directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2048250528.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2048250528.dir/CheckIncludeFiles.c.o   -c /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2048250528
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2048250528.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2048250528.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2048250528 -rdynamic 
+make[1]: Leaving directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec438078437/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec438078437.dir/build.make CMakeFiles/cmTryCompileExec438078437.dir/build
+make[1]: Entering directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec438078437.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec438078437.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec438078437
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec438078437.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec438078437.dir/CheckFunctionExists.c.o  -o cmTryCompileExec438078437 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/llamaphone/Desktop/P3/CMakeFiles/CMakeTmp'
+
+
