@@ -50,6 +50,16 @@ CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P3
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+.PHONY : install/strip/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -974,6 +984,7 @@ help:
 	@echo "... depend"
 	@echo "... title"
 	@echo "... joysticks"
+	@echo "... install/strip"
 	@echo "... cursor"
 	@echo "... sharing"
 	@echo "... edit_cache"

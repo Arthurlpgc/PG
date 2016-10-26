@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/llamaphone/Desktop/P2/glfw/deps/getopt.c
+/home/llamaphone/Desktop/P3/glfw/deps/getopt.c
 getopt.h
-/home/llamaphone/Desktop/P2/glfw/deps/getopt.h
+/home/llamaphone/Desktop/P3/glfw/deps/getopt.h
 stddef.h
 -
 string.h
 -
 
-/home/llamaphone/Desktop/P2/glfw/deps/getopt.h
+/home/llamaphone/Desktop/P3/glfw/deps/getopt.h
 
-/home/llamaphone/Desktop/P2/glfw/deps/glad.c
+/home/llamaphone/Desktop/P3/glfw/deps/glad.c
 stdio.h
 -
 stdlib.h
@@ -26,9 +26,9 @@ string.h
 glad/glad.h
 -
 
-/home/llamaphone/Desktop/P2/glfw/deps/tinycthread.c
+/home/llamaphone/Desktop/P3/glfw/deps/tinycthread.c
 tinycthread.h
-/home/llamaphone/Desktop/P2/glfw/deps/tinycthread.h
+/home/llamaphone/Desktop/P3/glfw/deps/tinycthread.h
 stdlib.h
 -
 signal.h
@@ -46,7 +46,7 @@ process.h
 sys/timeb.h
 -
 
-/home/llamaphone/Desktop/P2/glfw/deps/tinycthread.h
+/home/llamaphone/Desktop/P3/glfw/deps/tinycthread.h
 time.h
 -
 sys/time.h
@@ -56,7 +56,7 @@ pthread.h
 windows.h
 -
 
-/home/llamaphone/Desktop/P2/glfw/examples/particles.c
+/home/llamaphone/Desktop/P3/glfw/examples/particles.c
 stdlib.h
 -
 stdio.h
