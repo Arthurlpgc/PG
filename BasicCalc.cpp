@@ -4,9 +4,10 @@ using namespace std;
 typedef pair<double,double> pt;
 
 //Global variables
-vector<pt> ControlPoints,BezierCurve;
+vector<pt> ControlPoints,BezierCurve;vector<vector<pt> > BezierCurves;
 int SelectedPoint;
 double StartingX,StartingY;
+vector<double> Parameters;
 
 //conversion methods
 double screenY=520,screenX=720;
@@ -42,10 +43,52 @@ double PTdistance(pt a,pt b){
 bool PointInSegment(pt a,pt b,pt c){
 	return (PTdistance(a,b)+PTdistance(b,c))/PTdistance(a,c)<1.001;
 }
-void processHub(vector<pt> v,int numPoints){
-	
-	Casteljau(v,numPoints);
+pt multpt(pt a,double x){
+	pt b;
+	b.first=a.first*x;
+	b.second=a.second*x;
+	return b;
 }
+pt sumpt(pt a,pt b){
+	return make_pair(a.first+b.first,a.second+b.second);
+}
+vector<pt> cubicBsplinesCLines(vector<pt> v){
+	for(int i=0;i<4;i++)Parameters.push_back(1);
+	vector<pt> ret;int sz=v.size();
+	ret.push_back(v[0]);
+	ret.push_back(v[1]);
+	ret.push_back(sumpt(multpt(v[1],Parameters[0]/(Parameters[0]+Parameters[1])),multpt(v[2],Parameters[1]/(Parameters[0]+Parameters[1]))));
+	for(int i=2;i<sz-3;i++){
+		pt aux=sumpt(multpt(v[i],1-Parameters[i-2]/(Parameters[i-2]+Parameters[i-1]+Parameters[i])),multpt(v[i+1],(Parameters[i-2]/(Parameters[i-2]+Parameters[i-1]+Parameters[i]))));
+		ret.push_back(sumpt(multpt(aux,Parameters[i-2]/(Parameters[i-2]+Parameters[i-1])),multpt(ret[ret.size()-1],Parameters[i-1]/(Parameters[i-2]+Parameters[i-1]))));
+		ret.push_back(aux);
+		ret.push_back(sumpt(multpt(v[i],Parameters[i]/(Parameters[i-2]+Parameters[i-1]+Parameters[i])),multpt(v[i+1],1-(Parameters[i]/(Parameters[i-2]+Parameters[i-1]+Parameters[i])))));
+	}
+	pt aux=sumpt(multpt(v[sz-3],Parameters[sz-4]/(Parameters[sz-3]+Parameters[sz-4])),multpt(v[sz-2],Parameters[sz-3]/(Parameters[sz-4]+Parameters[sz-3])));
+	ret.push_back(sumpt(multpt(aux,Parameters[sz-4]/(Parameters[sz-3]+Parameters[sz-4])),multpt(ret[ret.size()-1],Parameters[sz-3]/(Parameters[sz-3]+Parameters[sz-4]))));
+	ret.push_back(aux);
+	ret.push_back(v[sz-2]);
+	ret.push_back(v[sz-1]);
+	return ret;
+}
+void processHub(vector<pt> v,int numPoints){
+	if(v.size()<5){
+		BezierCurves.clear();
+		Casteljau(v,numPoints);
+		BezierCurves.push_back(BezierCurve);
+	}else{
+		BezierCurves.clear();
+		vector<pt> aux=cubicBsplinesCLines(v);
+		for(int i=0;i<aux.size()/3;i++){
+			v.clear();
+			for(int j=0;j<4;j++){
+				v.push_back(aux[i*3+j]);
+			}
+			Casteljau(v,100);
+			BezierCurves.push_back(BezierCurve);
+		}
+	}
+}	
 
 //events
 void mbpressed(GLFWwindow* window, int button, int action, int mods){
@@ -88,7 +131,7 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	}else{//if on panel area
 		if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<700&&ypos>420&&ypos<460){
 			ControlPoints.clear();
-			BezierCurve.clear();
+			//BezierCurve.clear();
 		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE){
 	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<8){
 	    		ControlPoints.erase(ControlPoints.begin()+SelectedPoint);
@@ -152,7 +195,7 @@ int main(void){
         makeLines(ControlPoints);
         glLineWidth(0.5);
 		glColor3f(1.0, 1.0, 1.0);
-        makeLines(BezierCurve);
+        for(int i=0;i<BezierCurves.size();i++)makeLines(BezierCurves[i]);
         
         glfwSwapBuffers(window);
         glfwPollEvents();
