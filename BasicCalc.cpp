@@ -8,10 +8,20 @@ vector<pt> ControlPoints,BezierCurve;
 int SelectedPoint;
 double StartingX,StartingY;
 
+//conversion methods
+double screenY=520,screenX=720;
+double clcy(double y){
+	return (screenY/2-y)/double(screenY/2);
+}
+double clcx(double x){
+	return (x-screenX/2)/double(screenX/2);
+}
+
 //geom calculation
 #define PX first
 #define PY second 
 pt FindBezierPt(vector<pt> v,double t){
+	if(v.empty())return make_pair(0,0);
 	while(v.size()>1){
 		for(int i=0;i<v.size()-1;i++){
 			v[i]=(make_pair(v[i].PX*t+v[i+1].PX*(1-t),v[i].PY*t+v[i+1].PY*(1-t)));
@@ -21,7 +31,6 @@ pt FindBezierPt(vector<pt> v,double t){
 	return v[0];
 }
 void Casteljau(vector<pt> v,int numPoints){
-	assert(numPoints>1);
 	BezierCurve.clear();
 	for(int i=0;i<numPoints;i++){
 		BezierCurve.push_back(FindBezierPt(v,double(i)/double(numPoints-1)));
@@ -33,12 +42,16 @@ double PTdistance(pt a,pt b){
 bool PointInSegment(pt a,pt b,pt c){
 	return (PTdistance(a,b)+PTdistance(b,c))/PTdistance(a,c)<1.001;
 }
+void processHub(vector<pt> v,int numPoints){
+	
+	Casteljau(v,numPoints);
+}
 
 //events
 void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	double xpos, ypos;
 	glfwGetCursorPos(window, &xpos, &ypos);
-	if(xpos<480){//if on screen area
+	if(xpos<480&&ypos<480){//if on screen area
 	    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS){
 	    	//point drag
 	        for(int i=0;i<ControlPoints.size();i++){
@@ -64,26 +77,32 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	        }
 	        //point creation at the end
 	        ControlPoints.push_back(make_pair(xpos,ypos));
-	        Casteljau(ControlPoints,1000);
+	        processHub(ControlPoints,1000);
 	    }else {
 	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<8){
 	    		ControlPoints.erase(ControlPoints.begin()+SelectedPoint);
-	    		Casteljau(ControlPoints,1000);
+	    		processHub(ControlPoints,1000);
 	    	}
 	    	SelectedPoint=-1;
 	    }
 	}else{//if on panel area
-		if(xpos>500&&xpos<700&&ypos>420&&ypos<460){
+		if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<700&&ypos>420&&ypos<460){
 			ControlPoints.clear();
 			BezierCurve.clear();
+		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE){
+	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<8){
+	    		ControlPoints.erase(ControlPoints.begin()+SelectedPoint);
+	    		processHub(ControlPoints,1000);
+	    	}
+	    	SelectedPoint=-1;
 		}
 	}
 }
 void mmove(GLFWwindow* window, double xpos, double ypos){
 	if(~SelectedPoint){
-		ControlPoints[SelectedPoint].first=xpos;
-		ControlPoints[SelectedPoint].second=ypos;
-		Casteljau(ControlPoints,100);
+		ControlPoints[SelectedPoint].first=max(0.0,min(xpos,480.0));
+		ControlPoints[SelectedPoint].second=max(0.0,min(ypos,480.0));
+		processHub(ControlPoints,100);
 	}
 }
 
@@ -91,8 +110,8 @@ void mmove(GLFWwindow* window, double xpos, double ypos){
 void makeLines(vector<pt> v){
 	for(int i=1;i<v.size();i++){
     	glBegin(GL_LINES);
-			glVertex2f(float(v[i].first/360.0-1.0),float(-v[i].second/240.0+1.0));
-			glVertex2f(float(v[i-1].first/360.0-1.0), float(-v[i-1].second/240.0+1.0));
+			glVertex2f(clcx(v[i].first),clcy(v[i].second));
+			glVertex2f(clcx(v[i-1].first),clcy(v[i-1].second));
 		glEnd();
     }
 }
@@ -102,7 +121,7 @@ int main(void){
 	SelectedPoint=-1;
     GLFWwindow* window;
     if (!glfwInit())return -1;//glfw starting
-    window = glfwCreateWindow(720, 480, "P3.1", NULL, NULL);//window startup
+    window = glfwCreateWindow(720, 520, "P3.1", NULL, NULL);//window startup
     if (!window){
         glfwTerminate();
         return -1;
@@ -114,11 +133,19 @@ int main(void){
         glClearColor(0.1f, 0.1f, 0.2f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         //panel
-        glColor3f(0, 0, 0.10);
-        glRectf(0.3333,-1.0,1.0,1.0);
+        glColor3f(0.04, 0.04, 0.14);
+        glRectf(clcx(480),clcy(0),clcx(720),clcy(480));
         
+        glColor3f(0.1, 0.1, 0.17);
+        glRectf(clcx(0),clcy(480),clcx(720),clcy(520));
+        glColor3f(0.08, 0.08, 0.15);
+        glRectf(clcx(0),clcy(480),clcx(720),clcy(481));
+        glColor3f(0.06, 0.06, 0.13);
+        glRectf(clcx(20),clcy(495),clcx(700),clcy(505));
+
+
         glColor3f(0, 0.1, 0.10);
-        glRectf(0.388889,-0.75,0.944444,-0.916667);
+        glRectf(clcx(500),clcy(420),clcx(700),clcy(460));
 
         glLineWidth(1.5);
         glColor3f(0.8, 0.8, 0.8);
