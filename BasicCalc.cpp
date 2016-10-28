@@ -5,7 +5,7 @@ typedef pair<double,double> pt;
 
 //Global variables
 vector<pt> ControlPoints,BezierCurve;vector<vector<pt> > BezierCurves;
-int SelectedPoint;
+int SelectedPoint,ParaCnt;
 double StartingX,StartingY;
 vector<double> Parameters;
 
@@ -53,7 +53,6 @@ pt sumpt(pt a,pt b){
 	return make_pair(a.first+b.first,a.second+b.second);
 }
 vector<pt> cubicBsplinesCLines(vector<pt> v){
-	for(int i=0;i<4;i++)Parameters.push_back(1);
 	vector<pt> ret;int sz=v.size();
 	ret.push_back(v[0]);
 	ret.push_back(v[1]);
@@ -73,11 +72,15 @@ vector<pt> cubicBsplinesCLines(vector<pt> v){
 }
 void processHub(vector<pt> v,int numPoints){
 	if(v.size()<5){
+		Parameters.clear();
+		Parameters.push_back(1.0);
 		BezierCurves.clear();
 		Casteljau(v,numPoints);
 		BezierCurves.push_back(BezierCurve);
 	}else{
 		BezierCurves.clear();
+		while(Parameters.size()+3<v.size())Parameters.push_back(1);
+		while(Parameters.size()+3>v.size())Parameters.pop_back();
 		vector<pt> aux=cubicBsplinesCLines(v);
 		for(int i=0;i<aux.size()/3;i++){
 			v.clear();
@@ -94,7 +97,8 @@ void processHub(vector<pt> v,int numPoints){
 void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	double xpos, ypos;
 	glfwGetCursorPos(window, &xpos, &ypos);
-	if(xpos<480&&ypos<480){//if on screen area
+	if(ypos>480){
+	}else if(xpos<480&&ypos<480){//if on screen area
 	    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS){
 	    	//point drag
 	        for(int i=0;i<ControlPoints.size();i++){
@@ -196,7 +200,12 @@ int main(void){
         glLineWidth(0.5);
 		glColor3f(1.0, 1.0, 1.0);
         for(int i=0;i<BezierCurves.size();i++)makeLines(BezierCurves[i]);
-        
+       	double sum=0;
+		for (int i=0;i+1<Parameters.size();++i){
+			glColor3f(1, 1, 1);
+			sum+=Parameters[i];
+	        glRectf(clcx(20+680.0*sum/double(Parameters.size())),clcy(493),clcx(25+680.0*sum/double(Parameters.size())),clcy(507));
+		}
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
