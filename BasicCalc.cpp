@@ -63,8 +63,8 @@ vector<pt> cubicBsplinesCLines(vector<pt> v){
 		ret.push_back(aux);
 		ret.push_back(sumpt(multpt(v[i],Parameters[i]/(Parameters[i-2]+Parameters[i-1]+Parameters[i])),multpt(v[i+1],1-(Parameters[i]/(Parameters[i-2]+Parameters[i-1]+Parameters[i])))));
 	}
-	pt aux=sumpt(multpt(v[sz-3],Parameters[sz-4]/(Parameters[sz-3]+Parameters[sz-4])),multpt(v[sz-2],Parameters[sz-3]/(Parameters[sz-4]+Parameters[sz-3])));
-	ret.push_back(sumpt(multpt(aux,Parameters[sz-4]/(Parameters[sz-3]+Parameters[sz-4])),multpt(ret[ret.size()-1],Parameters[sz-3]/(Parameters[sz-3]+Parameters[sz-4]))));
+	pt aux=sumpt(multpt(v[sz-3],Parameters[sz-5]/(Parameters[sz-4]+Parameters[sz-5])),multpt(v[sz-2],Parameters[sz-4]/(Parameters[sz-4]+Parameters[sz-5])));
+	ret.push_back(sumpt(multpt(aux,Parameters[sz-5]/(Parameters[sz-5]+Parameters[sz-4])),multpt(ret[ret.size()-1],Parameters[sz-4]/(Parameters[sz-5]+Parameters[sz-4]))));
 	ret.push_back(aux);
 	ret.push_back(v[sz-2]);
 	ret.push_back(v[sz-1]);
