@@ -141,7 +141,7 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	}else if(ypos<480){//if on panel area
 		if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<700&&ypos>420&&ypos<460){
 			ControlPoints.clear();
-			Parameters.clear();
+			Parameters.clear()
 			//BezierCurve.clear();
 		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE){
 	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<8){
