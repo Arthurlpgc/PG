@@ -96,7 +96,8 @@ void processHub(vector<pt> v,int numPoints){
 
 double summing(vector<double> v){
 	double x=0;
-	for(double it:v)x+=it;
+	//for(double it:v)x+=it;
+	for(int i=0;i<v.size();i++)x+=v[i];
 	return x;
 }
 
