@@ -179,7 +179,7 @@ void mmove(GLFWwindow* window, double xpos, double ypos){
 		processHub(ControlPoints,100);
 	}else if(~SelSlider){
 		double sum=Parameters[SelSlider]+Parameters[SelSlider-1];
-		Parameters[SelSlider]=sum*(MaxSliderX-max(MinSliderX,min(MaxSliderX-5,xpos-3)))/(MaxSliderX-MinSliderX+5);
+		Parameters[SelSlider]=sum*(MaxSliderX-max(MinSliderX,min(MaxSliderX-5,xpos)))/(MaxSliderX-MinSliderX+5);
 		Parameters[SelSlider-1]=sum-Parameters[SelSlider];
 		processHub(ControlPoints,100);	
 	}
