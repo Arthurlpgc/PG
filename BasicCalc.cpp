@@ -60,13 +60,13 @@ vector<pt> cubicBsplinesCLines(vector<pt> v){
 	ret.push_back(v[1]);
 	ret.push_back(sumpt(multpt(v[1],Parameters[0]/(Parameters[0]+Parameters[1])),multpt(v[2],Parameters[1]/(Parameters[0]+Parameters[1]))));
 	for(int i=2;i<sz-3;i++){
-		pt aux=sumpt(multpt(v[i],1-Parameters[i-2]/(Parameters[i-2]+Parameters[i-1]+Parameters[i])),multpt(v[i+1],(Parameters[i-2]/(Parameters[i-2]+Parameters[i-1]+Parameters[i]))));
-		ret.push_back(sumpt(multpt(aux,Parameters[i-2]/(Parameters[i-2]+Parameters[i-1])),multpt(ret[ret.size()-1],Parameters[i-1]/(Parameters[i-2]+Parameters[i-1]))));
+		pt aux=sumpt(multpt(v[i],1-Parameters[(i-2)%Parameters.size()]/(Parameters[(i-2)%Parameters.size()]+Parameters[(i-1)%Parameters.size()]+Parameters[(i)%Parameters.size()])),multpt(v[i+1],(Parameters[(i-2)%Parameters.size()]/(Parameters[(i-2)%Parameters.size()]+Parameters[(i-1)%Parameters.size()]+Parameters[i%Parameters.size()]))));
+		ret.push_back(sumpt(multpt(aux,Parameters[(i-2)%Parameters.size()]/(Parameters[(i-2)%Parameters.size()]+Parameters[(i-1)%Parameters.size()])),multpt(ret[ret.size()-1],Parameters[(i-1)%Parameters.size()]/(Parameters[(i-2)%Parameters.size()]+Parameters[(i-1)%Parameters.size()]))));
 		ret.push_back(aux);
-		ret.push_back(sumpt(multpt(v[i],Parameters[i]/(Parameters[i-2]+Parameters[i-1]+Parameters[i])),multpt(v[i+1],1-(Parameters[i]/(Parameters[i-2]+Parameters[i-1]+Parameters[i])))));
+		ret.push_back(sumpt(multpt(v[i],Parameters[(i)%Parameters.size()]/(Parameters[(i-2)%Parameters.size()]+Parameters[(i-1)%Parameters.size()]+Parameters[(i)%Parameters.size()])),multpt(v[i+1],1-(Parameters[(i)%Parameters.size()]/(Parameters[(i-2)%Parameters.size()]+Parameters[(i-1)%Parameters.size()]+Parameters[(i)%Parameters.size()])))));
 	}
-	pt aux=sumpt(multpt(v[sz-3],Parameters[sz-5]/(Parameters[sz-4]+Parameters[sz-5])),multpt(v[sz-2],Parameters[sz-4]/(Parameters[sz-4]+Parameters[sz-5])));
-	ret.push_back(sumpt(multpt(aux,Parameters[sz-5]/(Parameters[sz-5]+Parameters[sz-4])),multpt(ret[ret.size()-1],Parameters[sz-4]/(Parameters[sz-5]+Parameters[sz-4]))));
+	pt aux=sumpt(multpt(v[sz-3],Parameters[(sz-5)%Parameters.size()]/(Parameters[(sz-4)%Parameters.size()]+Parameters[(sz-5)%Parameters.size()])),multpt(v[sz-2],Parameters[(sz-4)%Parameters.size()]/(Parameters[(sz-4)%Parameters.size()]+Parameters[(sz-5)])));
+	ret.push_back(sumpt(multpt(aux,Parameters[(sz-5)%Parameters.size()]/(Parameters[(sz-5)%Parameters.size()]+Parameters[(sz-4)%Parameters.size()])),multpt(ret[ret.size()-1],Parameters[(sz-4)%Parameters.size()]/(Parameters[(sz-5)%Parameters.size()]+Parameters[(sz-4)%Parameters.size()]))));
 	ret.push_back(aux);
 	ret.push_back(v[sz-2]);
 	ret.push_back(v[sz-1]);
@@ -85,8 +85,8 @@ void processHub(vector<pt> v,int numPoints){
 		}else{
 			BezierCurves.clear();
 			for(int i=0;i<8;i++)v.push_back(v[i%v.size()]);
-			while(Parameters.size()+3<v.size())Parameters.push_back(1);
-			while(Parameters.size()+3>v.size())Parameters.pop_back();
+			while(Parameters.size()<v.size()-8)Parameters.push_back(1);
+			while(Parameters.size()>v.size()-8)Parameters.pop_back();
 			vector<pt> aux=cubicBsplinesCLines(v);
 			for(int i=0;i<aux.size()/3;i++){
 				v.clear();
@@ -260,6 +260,12 @@ int main(void){
 
         glLineWidth(1.5);
         glColor3f(0.8, 0.8, 0.8);
+        if(closeCurve){
+        	glBegin(GL_LINES);
+				glVertex2f(clcx(ControlPoints[0].first),clcy(ControlPoints[0].second));
+				glVertex2f(clcx(ControlPoints[ControlPoints.size()-1].first),clcy(ControlPoints[ControlPoints.size()-1].second));
+			glEnd();
+        }
         makeLines(ControlPoints);
         glLineWidth(0.5);
 		glColor3f(1.0, 1.0, 1.0);

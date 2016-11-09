@@ -94,7 +94,7 @@ void processHub(vector<pt> v,int numPoints){
 					v.push_back(aux[i*3+j]);
 				}
 				Casteljau(v,100);
-				if(i>0&&i+1<aux.size()/3)BezierCurves.push_back(BezierCurve);
+				if(i>1&&i+2	<aux.size()/3)BezierCurves.push_back(BezierCurve);
 			}
 		}
 	}else{
@@ -260,6 +260,12 @@ int main(void){
 
         glLineWidth(1.5);
         glColor3f(0.8, 0.8, 0.8);
+        if(closeCurve){
+        	glBegin(GL_LINES);
+				glVertex2f(clcx(ControlPoints[0].first),clcy(ControlPoints[0].second));
+				glVertex2f(clcx(ControlPoints[ControlPoints.size()-1].first),clcy(ControlPoints[ControlPoints.size()-1].second));
+			glEnd();
+        }
         makeLines(ControlPoints);
         glLineWidth(0.5);
 		glColor3f(1.0, 1.0, 1.0);
