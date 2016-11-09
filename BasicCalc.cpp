@@ -9,6 +9,7 @@ int SelectedPoint,ParaCnt;
 double StartingX,StartingY;
 vector<double> Parameters;
 int SelSlider=-1;double MaxSliderX,MinSliderX;
+bool closeCurve=false;
 
 //conversion methods
 double screenY=520,screenX=720;
@@ -72,24 +73,50 @@ vector<pt> cubicBsplinesCLines(vector<pt> v){
 	return ret;
 }
 void processHub(vector<pt> v,int numPoints){
-	if(v.size()<5){
-		Parameters.clear();
-		Parameters.push_back(1.0);
-		BezierCurves.clear();
-		Casteljau(v,numPoints);
-		BezierCurves.push_back(BezierCurve);
-	}else{
-		BezierCurves.clear();
-		while(Parameters.size()+3<v.size())Parameters.push_back(1);
-		while(Parameters.size()+3>v.size())Parameters.pop_back();
-		vector<pt> aux=cubicBsplinesCLines(v);
-		for(int i=0;i<aux.size()/3;i++){
-			v.clear();
-			for(int j=0;j<4;j++){
-				v.push_back(aux[i*3+j]);
-			}
-			Casteljau(v,100);
+	if(closeCurve){
+		if(v.size()==1){
+			Parameters.clear();
+			Parameters.push_back(1.0);
+		}else if(v.size()<3){
+			Parameters.push_back(1.0);
+			BezierCurves.clear();
+			Casteljau(v,numPoints);
 			BezierCurves.push_back(BezierCurve);
+		}else{
+			BezierCurves.clear();
+			for(int i=0;i<8;i++)v.push_back(v[i%v.size()]);
+			while(Parameters.size()+3<v.size())Parameters.push_back(1);
+			while(Parameters.size()+3>v.size())Parameters.pop_back();
+			vector<pt> aux=cubicBsplinesCLines(v);
+			for(int i=0;i<aux.size()/3;i++){
+				v.clear();
+				for(int j=0;j<4;j++){
+					v.push_back(aux[i*3+j]);
+				}
+				Casteljau(v,100);
+				if(i>1&&i+2	<aux.size()/3)BezierCurves.push_back(BezierCurve);
+			}
+		}
+	}else{
+		if(v.size()<5){
+			Parameters.clear();
+			Parameters.push_back(1.0);
+			BezierCurves.clear();
+			Casteljau(v,numPoints);
+			BezierCurves.push_back(BezierCurve);
+		}else{
+			BezierCurves.clear();
+			while(Parameters.size()+3<v.size())Parameters.push_back(1);
+			while(Parameters.size()+3>v.size())Parameters.pop_back();
+			vector<pt> aux=cubicBsplinesCLines(v);
+			for(int i=0;i<aux.size()/3;i++){
+				v.clear();
+				for(int j=0;j<4;j++){
+					v.push_back(aux[i*3+j]);
+				}
+				Casteljau(v,100);
+				BezierCurves.push_back(BezierCurve);
+			}
 		}
 	}
 }	
@@ -143,7 +170,10 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 		if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<700&&ypos>420&&ypos<460){
 			ControlPoints.clear();
 			Parameters.clear();
-			//BezierCurve.clear();
+			BezierCurves.clear();
+			closeCurve=false;
+		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<700&&ypos>360&&ypos<400){
+			closeCurve=true;
 		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE){
 	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<8){
 	    		ControlPoints.erase(ControlPoints.begin()+SelectedPoint);

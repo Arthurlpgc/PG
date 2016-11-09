@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/llamaphone/Desktop/P3/glfw/deps/glad.c" "/home/llamaphone/Desktop/P3/glfw/examples/CMakeFiles/gears.dir/__/deps/glad.c.o"
-  "/home/llamaphone/Desktop/P3/glfw/examples/gears.c" "/home/llamaphone/Desktop/P3/glfw/examples/CMakeFiles/gears.dir/gears.c.o"
+  "/home/llamaphone/PG/glfw/deps/glad.c" "/home/llamaphone/PG/glfw/examples/CMakeFiles/gears.dir/__/deps/glad.c.o"
+  "/home/llamaphone/PG/glfw/examples/gears.c" "/home/llamaphone/PG/glfw/examples/CMakeFiles/gears.dir/gears.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/llamaphone/Desktop/P3/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/llamaphone/PG/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

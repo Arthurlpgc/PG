@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P3
+CMAKE_SOURCE_DIR = /home/llamaphone/PG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P3
+CMAKE_BINARY_DIR = /home/llamaphone/PG
 
 # Include any dependencies generated for this target.
 include glfw/tests/CMakeFiles/timeout.dir/depend.make
@@ -51,17 +51,17 @@ include glfw/tests/CMakeFiles/timeout.dir/flags.make
 
 glfw/tests/CMakeFiles/timeout.dir/timeout.c.o: glfw/tests/CMakeFiles/timeout.dir/flags.make
 glfw/tests/CMakeFiles/timeout.dir/timeout.c.o: glfw/tests/timeout.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/PG/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/tests/CMakeFiles/timeout.dir/timeout.c.o"
-	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/timeout.dir/timeout.c.o   -c /home/llamaphone/Desktop/P3/glfw/tests/timeout.c
+	cd /home/llamaphone/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/timeout.dir/timeout.c.o   -c /home/llamaphone/PG/glfw/tests/timeout.c
 
 glfw/tests/CMakeFiles/timeout.dir/timeout.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/timeout.dir/timeout.c.i"
-	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P3/glfw/tests/timeout.c > CMakeFiles/timeout.dir/timeout.c.i
+	cd /home/llamaphone/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/PG/glfw/tests/timeout.c > CMakeFiles/timeout.dir/timeout.c.i
 
 glfw/tests/CMakeFiles/timeout.dir/timeout.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/timeout.dir/timeout.c.s"
-	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P3/glfw/tests/timeout.c -o CMakeFiles/timeout.dir/timeout.c.s
+	cd /home/llamaphone/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/PG/glfw/tests/timeout.c -o CMakeFiles/timeout.dir/timeout.c.s
 
 glfw/tests/CMakeFiles/timeout.dir/timeout.c.o.requires:
 .PHONY : glfw/tests/CMakeFiles/timeout.dir/timeout.c.o.requires
@@ -74,17 +74,17 @@ glfw/tests/CMakeFiles/timeout.dir/timeout.c.o.provides.build: glfw/tests/CMakeFi
 
 glfw/tests/CMakeFiles/timeout.dir/__/deps/glad.c.o: glfw/tests/CMakeFiles/timeout.dir/flags.make
 glfw/tests/CMakeFiles/timeout.dir/__/deps/glad.c.o: glfw/deps/glad.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/PG/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/tests/CMakeFiles/timeout.dir/__/deps/glad.c.o"
-	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/timeout.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/P3/glfw/deps/glad.c
+	cd /home/llamaphone/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/timeout.dir/__/deps/glad.c.o   -c /home/llamaphone/PG/glfw/deps/glad.c
 
 glfw/tests/CMakeFiles/timeout.dir/__/deps/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/timeout.dir/__/deps/glad.c.i"
-	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P3/glfw/deps/glad.c > CMakeFiles/timeout.dir/__/deps/glad.c.i
+	cd /home/llamaphone/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/PG/glfw/deps/glad.c > CMakeFiles/timeout.dir/__/deps/glad.c.i
 
 glfw/tests/CMakeFiles/timeout.dir/__/deps/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/timeout.dir/__/deps/glad.c.s"
-	cd /home/llamaphone/Desktop/P3/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P3/glfw/deps/glad.c -o CMakeFiles/timeout.dir/__/deps/glad.c.s
+	cd /home/llamaphone/PG/glfw/tests && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/PG/glfw/deps/glad.c -o CMakeFiles/timeout.dir/__/deps/glad.c.s
 
 glfw/tests/CMakeFiles/timeout.dir/__/deps/glad.c.o.requires:
 .PHONY : glfw/tests/CMakeFiles/timeout.dir/__/deps/glad.c.o.requires
@@ -116,7 +116,7 @@ glfw/tests/timeout: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 glfw/tests/timeout: /usr/lib/x86_64-linux-gnu/libXcursor.so
 glfw/tests/timeout: glfw/tests/CMakeFiles/timeout.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable timeout"
-	cd /home/llamaphone/Desktop/P3/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/timeout.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/llamaphone/PG/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/timeout.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 glfw/tests/CMakeFiles/timeout.dir/build: glfw/tests/timeout
@@ -127,10 +127,10 @@ glfw/tests/CMakeFiles/timeout.dir/requires: glfw/tests/CMakeFiles/timeout.dir/__
 .PHONY : glfw/tests/CMakeFiles/timeout.dir/requires
 
 glfw/tests/CMakeFiles/timeout.dir/clean:
-	cd /home/llamaphone/Desktop/P3/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/timeout.dir/cmake_clean.cmake
+	cd /home/llamaphone/PG/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/timeout.dir/cmake_clean.cmake
 .PHONY : glfw/tests/CMakeFiles/timeout.dir/clean
 
 glfw/tests/CMakeFiles/timeout.dir/depend:
-	cd /home/llamaphone/Desktop/P3 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P3 /home/llamaphone/Desktop/P3/glfw/tests /home/llamaphone/Desktop/P3 /home/llamaphone/Desktop/P3/glfw/tests /home/llamaphone/Desktop/P3/glfw/tests/CMakeFiles/timeout.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/llamaphone/PG && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/PG /home/llamaphone/PG/glfw/tests /home/llamaphone/PG /home/llamaphone/PG/glfw/tests /home/llamaphone/PG/glfw/tests/CMakeFiles/timeout.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glfw/tests/CMakeFiles/timeout.dir/depend
 

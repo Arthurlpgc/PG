@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/llamaphone/Desktop/P3/glfw/deps/glad.c
+/home/llamaphone/PG/glfw/deps/glad.c
 stdio.h
 -
 stdlib.h
@@ -16,7 +16,7 @@ string.h
 glad/glad.h
 -
 
-/home/llamaphone/Desktop/P3/glfw/tests/icon.c
+/home/llamaphone/PG/glfw/tests/icon.c
 glad/glad.h
 -
 GLFW/glfw3.h

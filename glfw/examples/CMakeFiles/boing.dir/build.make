@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/llamaphone/Desktop/P3
+CMAKE_SOURCE_DIR = /home/llamaphone/PG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/llamaphone/Desktop/P3
+CMAKE_BINARY_DIR = /home/llamaphone/PG
 
 # Include any dependencies generated for this target.
 include glfw/examples/CMakeFiles/boing.dir/depend.make
@@ -51,17 +51,17 @@ include glfw/examples/CMakeFiles/boing.dir/flags.make
 
 glfw/examples/CMakeFiles/boing.dir/boing.c.o: glfw/examples/CMakeFiles/boing.dir/flags.make
 glfw/examples/CMakeFiles/boing.dir/boing.c.o: glfw/examples/boing.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/PG/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/examples/CMakeFiles/boing.dir/boing.c.o"
-	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/boing.dir/boing.c.o   -c /home/llamaphone/Desktop/P3/glfw/examples/boing.c
+	cd /home/llamaphone/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/boing.dir/boing.c.o   -c /home/llamaphone/PG/glfw/examples/boing.c
 
 glfw/examples/CMakeFiles/boing.dir/boing.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/boing.dir/boing.c.i"
-	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P3/glfw/examples/boing.c > CMakeFiles/boing.dir/boing.c.i
+	cd /home/llamaphone/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/PG/glfw/examples/boing.c > CMakeFiles/boing.dir/boing.c.i
 
 glfw/examples/CMakeFiles/boing.dir/boing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/boing.dir/boing.c.s"
-	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P3/glfw/examples/boing.c -o CMakeFiles/boing.dir/boing.c.s
+	cd /home/llamaphone/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/PG/glfw/examples/boing.c -o CMakeFiles/boing.dir/boing.c.s
 
 glfw/examples/CMakeFiles/boing.dir/boing.c.o.requires:
 .PHONY : glfw/examples/CMakeFiles/boing.dir/boing.c.o.requires
@@ -74,17 +74,17 @@ glfw/examples/CMakeFiles/boing.dir/boing.c.o.provides.build: glfw/examples/CMake
 
 glfw/examples/CMakeFiles/boing.dir/__/deps/glad.c.o: glfw/examples/CMakeFiles/boing.dir/flags.make
 glfw/examples/CMakeFiles/boing.dir/__/deps/glad.c.o: glfw/deps/glad.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/Desktop/P3/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/llamaphone/PG/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object glfw/examples/CMakeFiles/boing.dir/__/deps/glad.c.o"
-	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/boing.dir/__/deps/glad.c.o   -c /home/llamaphone/Desktop/P3/glfw/deps/glad.c
+	cd /home/llamaphone/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/boing.dir/__/deps/glad.c.o   -c /home/llamaphone/PG/glfw/deps/glad.c
 
 glfw/examples/CMakeFiles/boing.dir/__/deps/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/boing.dir/__/deps/glad.c.i"
-	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/Desktop/P3/glfw/deps/glad.c > CMakeFiles/boing.dir/__/deps/glad.c.i
+	cd /home/llamaphone/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/llamaphone/PG/glfw/deps/glad.c > CMakeFiles/boing.dir/__/deps/glad.c.i
 
 glfw/examples/CMakeFiles/boing.dir/__/deps/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/boing.dir/__/deps/glad.c.s"
-	cd /home/llamaphone/Desktop/P3/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/Desktop/P3/glfw/deps/glad.c -o CMakeFiles/boing.dir/__/deps/glad.c.s
+	cd /home/llamaphone/PG/glfw/examples && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/llamaphone/PG/glfw/deps/glad.c -o CMakeFiles/boing.dir/__/deps/glad.c.s
 
 glfw/examples/CMakeFiles/boing.dir/__/deps/glad.c.o.requires:
 .PHONY : glfw/examples/CMakeFiles/boing.dir/__/deps/glad.c.o.requires
@@ -116,7 +116,7 @@ glfw/examples/boing: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 glfw/examples/boing: /usr/lib/x86_64-linux-gnu/libXcursor.so
 glfw/examples/boing: glfw/examples/CMakeFiles/boing.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable boing"
-	cd /home/llamaphone/Desktop/P3/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/boing.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/llamaphone/PG/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/boing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 glfw/examples/CMakeFiles/boing.dir/build: glfw/examples/boing
@@ -127,10 +127,10 @@ glfw/examples/CMakeFiles/boing.dir/requires: glfw/examples/CMakeFiles/boing.dir/
 .PHONY : glfw/examples/CMakeFiles/boing.dir/requires
 
 glfw/examples/CMakeFiles/boing.dir/clean:
-	cd /home/llamaphone/Desktop/P3/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/boing.dir/cmake_clean.cmake
+	cd /home/llamaphone/PG/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/boing.dir/cmake_clean.cmake
 .PHONY : glfw/examples/CMakeFiles/boing.dir/clean
 
 glfw/examples/CMakeFiles/boing.dir/depend:
-	cd /home/llamaphone/Desktop/P3 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/Desktop/P3 /home/llamaphone/Desktop/P3/glfw/examples /home/llamaphone/Desktop/P3 /home/llamaphone/Desktop/P3/glfw/examples /home/llamaphone/Desktop/P3/glfw/examples/CMakeFiles/boing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/llamaphone/PG && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llamaphone/PG /home/llamaphone/PG/glfw/examples /home/llamaphone/PG /home/llamaphone/PG/glfw/examples /home/llamaphone/PG/glfw/examples/CMakeFiles/boing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glfw/examples/CMakeFiles/boing.dir/depend
 
