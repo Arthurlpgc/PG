@@ -10,6 +10,8 @@ double StartingX,StartingY;
 vector<double> Parameters;
 int SelSlider=-1;double MaxSliderX,MinSliderX;
 bool closeCurve=false;
+float distTol=8;
+bool hideBez=0,hideCp=0,bezC2=1,bezC1=0;
 
 //conversion methods
 double screenY=520,screenX=720;
@@ -73,7 +75,12 @@ vector<pt> cubicBsplinesCLines(vector<pt> v){
 	return ret;
 }
 void processHub(vector<pt> v,int numPoints){
-	if(closeCurve){
+	if(!bezC2){
+		Parameters.clear();
+		BezierCurves.clear();
+		Casteljau(v,numPoints);
+		BezierCurves.push_back(BezierCurve);
+	}else if(closeCurve){
 		if(v.size()==1){
 			Parameters.clear();
 			Parameters.push_back(1.0);
@@ -128,6 +135,75 @@ double summing(vector<double> v){
 	return x;
 }
 
+//letters
+void printLetter(double x,double y,char c){
+	glColor3f(0.15, 0.15, 0.15);
+	if(c=='C'){
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+35),clcx(x),clcy(y+40));    
+	}else if(c=='E'){
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+18),clcx(x),clcy(y+22));
+        glRectf(clcx(x+20),clcy(y+35),clcx(x),clcy(y+40));    
+	}else if(c=='B'){
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+18),clcx(x),clcy(y+22));
+        glRectf(clcx(x+20),clcy(y+35),clcx(x),clcy(y+40));
+		glRectf(clcx(x+15),clcy(y),clcx(x+20),clcy(y+40));    
+	}else if(c=='L'){
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y+35),clcx(x),clcy(y+40));    
+	}else if(c=='O'||c=='0'){
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+40));
+		glRectf(clcx(x+15),clcy(y),clcx(x+20),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+35),clcx(x),clcy(y+40));    
+	}else if(c=='A'){
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+40));
+		glRectf(clcx(x+15),clcy(y),clcx(x+20),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+15),clcx(x),clcy(y+20));    
+	}else if(c=='2'){
+		glRectf(clcx(x+5),clcy(y+40),clcx(x),clcy(y+20));
+		glRectf(clcx(x+15),clcy(y+20),clcx(x+20),clcy(y));
+        glRectf(clcx(x+20),clcy(y+19),clcx(x),clcy(y+21));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+35),clcx(x),clcy(y+40));    
+	}else if(c=='S'){
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+20));
+		glRectf(clcx(x+15),clcy(y+20),clcx(x+20),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y+18),clcx(x),clcy(y+22));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+35),clcx(x),clcy(y+40));    
+	}else if(c=='Z'){
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+35),clcx(x),clcy(y+40));    
+		 glLineWidth(5);
+		glBegin(GL_LINES);
+			glVertex2f(clcx(x+3),clcy(y+37));
+			glVertex2f(clcx(x+17),clcy(y+3));
+		glEnd();
+	}else if(c=='F'){
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+15),clcx(x),clcy(y+20));
+	}else if(c=='P'){
+		glRectf(clcx(x+15),clcy(y),clcx(x+20),clcy(y+20));
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+15),clcx(x),clcy(y+20));
+	}else if(c=='R'){
+		glRectf(clcx(x+15),clcy(y),clcx(x+20),clcy(y+20));
+		glRectf(clcx(x+15),clcy(y+20),clcx(x+10),clcy(y+40));
+		glRectf(clcx(x+5),clcy(y),clcx(x),clcy(y+40));
+        glRectf(clcx(x+20),clcy(y),clcx(x),clcy(y+5));
+        glRectf(clcx(x+20),clcy(y+15),clcx(x),clcy(y+20));
+	}
+}
+
 //events
 void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	double xpos, ypos;
@@ -136,7 +212,7 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS){
 	    	//point drag
 	        for(int i=0;i<ControlPoints.size();i++){
-				if(pow(fabs(xpos-ControlPoints[i].first),2)+pow(fabs(ypos-ControlPoints[i].second),2)<4){
+				if(pow(fabs(xpos-ControlPoints[i].first),2)+pow(fabs(ypos-ControlPoints[i].second),2)<distTol/2){
 					SelectedPoint=i;
 					StartingX=xpos;
 					StartingY=ypos;
@@ -160,24 +236,30 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 	        ControlPoints.push_back(make_pair(xpos,ypos));
 	        processHub(ControlPoints,1000);
 	    }else {
-	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<8){
+	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<distTol){
 	    		ControlPoints.erase(ControlPoints.begin()+SelectedPoint);
 	    		processHub(ControlPoints,1000);
 	    	}
 	    	SelectedPoint=-1;SelSlider=-1;
 	    }
 	}else if(ypos<480){//if on panel area
-		if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<700&&ypos>420&&ypos<460){
+		if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<700&&ypos>400&&ypos<460){
 			ControlPoints.clear();
 			Parameters.clear();
 			BezierCurves.clear();
 			closeCurve=false;
-		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<700&&ypos>360&&ypos<400){
-			closeCurve=true;
+		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<700&&ypos>320&&ypos<380){
+			closeCurve=closeCurve^1;processHub(ControlPoints,1000);
+		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>500&&xpos<560&&ypos>240&&ypos<300){
+			hideBez^=1;
+		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>570&&xpos<630&&ypos>240&&ypos<300){
+			bezC2^=1;processHub(ControlPoints,1000);
+		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS&&xpos>640&&xpos<700&&ypos>240&&ypos<300){
+			hideCp^=1;
 		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE){
-	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<8){
+	    	if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<distTol){
 	    		ControlPoints.erase(ControlPoints.begin()+SelectedPoint);
-	    		processHub(ControlPoints,1000);
+	    		if(ControlPoints.size())processHub(ControlPoints,1000);
 	    	}
 	    	SelectedPoint=-1;SelSlider=-1;
 		}
@@ -195,7 +277,7 @@ void mbpressed(GLFWwindow* window, int button, int action, int mods){
 			if(SelSlider==-1)return;
 			processHub(ControlPoints,1000);
 		}else if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE){
-			if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<8){
+			if(~SelectedPoint&&fabs(xpos-StartingX)+fabs(ypos-StartingY)<distTol){
 	    		ControlPoints.erase(ControlPoints.begin()+SelectedPoint);
 	    		processHub(ControlPoints,1000);
 	    	}
@@ -243,9 +325,9 @@ int main(void){
     while (!glfwWindowShouldClose(window)){//render loop
         glClearColor(0.1f, 0.1f, 0.2f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        //panel
         glColor3f(0.04, 0.04, 0.14);
         glRectf(clcx(480),clcy(0),clcx(720),clcy(480));
+        //panel
         
         glColor3f(0.1, 0.1, 0.17);
         glRectf(clcx(0),clcy(480),clcx(720),clcy(520));
@@ -255,21 +337,55 @@ int main(void){
         glRectf(clcx(20),clcy(495),clcx(700),clcy(505));
 
 
-        glColor3f(0, 0.1, 0.10);
-        glRectf(clcx(500),clcy(420),clcx(700),clcy(460));
-
+        glColor3f(0.7, 0.7, 0.7);
+        glRectf(clcx(500),clcy(400),clcx(700),clcy(460));
+		printLetter(540,410,'C');
+		printLetter(565,410,'L');
+		printLetter(590,410,'E');
+		printLetter(615,410,'A');
+		printLetter(640,410,'R');
+		
+		if(closeCurve)glColor3f(0.85, 0.1, 0.10);
+        else glColor3f(0.1, 0.1, 0.85); 
+        glRectf(clcx(500),clcy(320),clcx(700),clcy(380));
+		printLetter(540,330,'C');
+		printLetter(565,330,'L');
+		printLetter(590,330,'0');
+		printLetter(615,330,'S');
+		printLetter(640,330,'E');
+		
+		if(hideBez)glColor3f(0, 0.1, 0.10);
+        else glColor3f(0.1, 0.45, 0.45); 
+        glRectf(clcx(500),clcy(240),clcx(560),clcy(300));
+       	printLetter(505,250,'B');
+       	printLetter(530,250,'Z');        
+        
+		if(hideCp)glColor3f(0, 0.1, 0.10);
+        else glColor3f(0.1, 0.45, 0.45); 
+        glRectf(clcx(700),clcy(240),clcx(640),clcy(300));
+       	printLetter(645,250,'C');
+       	printLetter(670,250,'P');        
+        
+		if(!bezC2)glColor3f(0, 0.1, 0.10);
+        else glColor3f(0.1, 0.45, 0.45); 
+        glRectf(clcx(570),clcy(240),clcx(630),clcy(300));
+		printLetter(575,250,'C');
+		if(bezC2)printLetter(600,250,'2');
+		else if(bezC1)printLetter(600,250,'1');
+		else printLetter(600,250,'0');
+		
         glLineWidth(1.5);
         glColor3f(0.8, 0.8, 0.8);
-        if(closeCurve){
+        if(!hideCp&&closeCurve&&ControlPoints.size()>0){
         	glBegin(GL_LINES);
 				glVertex2f(clcx(ControlPoints[0].first),clcy(ControlPoints[0].second));
 				glVertex2f(clcx(ControlPoints[ControlPoints.size()-1].first),clcy(ControlPoints[ControlPoints.size()-1].second));
 			glEnd();
         }
-        makeLines(ControlPoints);
+        if(!hideCp)makeLines(ControlPoints);
         glLineWidth(0.5);
 		glColor3f(1.0, 1.0, 1.0);
-        for(int i=0;i<BezierCurves.size();i++)makeLines(BezierCurves[i]);
+        if(!hideBez)for(int i=0;i<BezierCurves.size();i++)makeLines(BezierCurves[i]);
        	double sum=0;
 		for (int i=0;i+1<Parameters.size();++i){
 			glColor3f(1, 1, 1);
